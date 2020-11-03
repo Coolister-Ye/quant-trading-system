@@ -2,7 +2,8 @@ import os
 import yaml
 import pathlib
 
-class FileUtils():
+
+class FileUtils:
     def __init__(self):
         self.config_path = pathlib.Path(os.getcwd()).parent.joinpath('config')
 

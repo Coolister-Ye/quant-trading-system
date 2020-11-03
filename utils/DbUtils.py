@@ -1,6 +1,7 @@
 import pymysql.cursors
 from utils.FileUtils import FileUtils
 
+
 class DbUtils(FileUtils):
 
     def __init__(self):

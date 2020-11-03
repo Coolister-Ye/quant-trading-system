@@ -1,0 +1,8 @@
+order:
+  appId: com.tdx.tdxiMac
+  defaultCheckBoxTitle: 刷新
+  marketCode:
+    SZ: 0
+    SS: 1
+  allQuantityTitle: 全部
+  actionText: 下单
