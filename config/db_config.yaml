@@ -1,0 +1,10 @@
+mysql:
+  host: localhost
+  user: root
+  port: 3306
+  password: Dajidali888
+  database: quant
+  charset: utf8mb4
+sql:
+  insert_template: INSERT INTO `{}` ({}) VALUES ({})
+  select_template: SELECT {} FROM {}
