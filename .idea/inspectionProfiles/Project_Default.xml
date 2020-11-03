@@ -1,0 +1,25 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="tensorflow_core._api.v2.io.gfile.GFile" />
+          <option value="tensorflow_core.python.keras.api._v2.keras.callbacks.LearningRateScheduler" />
+          <option value="tensorflow.__version__" />
+          <option value="tensorflow.*" />
+          <option value="predicting_v2.trainedBertModel.*" />
+          <option value="object.transform" />
+          <option value="object.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
