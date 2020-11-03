@@ -42,6 +42,7 @@ class DbUtils(FileUtils):
         except Exception:
             print("- Cannot get data from mysql: " + sql)
 
+
 if __name__ == '__main__':
     dbu = DbUtils()
     dbu.push("users", ["email", "password"], ["text1", "text2"])
