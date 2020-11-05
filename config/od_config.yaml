@@ -10,3 +10,7 @@ order:
   confirmAction:
     Ture: 确定
     False: 取消
+  histK:
+    d: date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,pctChg,isST
+    5: date,time,code,open,high,low,close,volume,amount,adjustflag
+    60: date,time,code,open,high,low,close,volume,amount,adjustflag

@@ -19,13 +19,17 @@ class DbUtils(FileUtils):
                 re.append(str(i))
         return ",".join(re)
 
-    def push(self, tableName, colNames, values):
+    def push(self, tableName, colNames, values, update_date):
         try:
             with self.db_conn.cursor() as cursor:
-                colNamesSql = ",".join(["`{}`".format(c) for c in colNames])
-                valuesSql = DbUtils.joinValues(values)
-                sql = self.db_config['sql']['insert_template'].format(tableName, colNamesSql, valuesSql)
-                cursor.execute(sql)
+                for v in values:
+                    colNamesSql = ",".join(["`{}`".format(c) for c in colNames])
+                    valuesSql = DbUtils.joinValues(v)
+                    if update_date != "":
+                        colNamesSql += ",`{}`".format('update_date')
+                        valuesSql += ",'{}'".format(update_date)
+                    sql = self.db_config['sql']['insert_template'].format(tableName, colNamesSql, valuesSql)
+                    cursor.execute(sql)
             self.db_conn.commit()
         except Exception:
             print("- Cannot load data to mysql: " + sql)
@@ -35,10 +39,11 @@ class DbUtils(FileUtils):
             with self.db_conn.cursor() as cursor:
                 colNamesSql = ",".join(["`{}`".format(c) for c in colNames]) if colNames != "*" else colNames
                 sql = self.db_config['sql']['select_template'].format(colNamesSql, tableName)
-                sql += whereCondition
-                sql += "LIMIT " + limit if limit != "" else limit
+                sql += " WHERE " + whereCondition
+                sql += " LIMIT " + limit if limit != "" else limit
                 cursor.execute(sql)
             data = cursor.fetchall()
+            print("+ Load data from mysql: " + sql)
             return list(data)
         except Exception:
             print("- Cannot get data from mysql: " + sql)
