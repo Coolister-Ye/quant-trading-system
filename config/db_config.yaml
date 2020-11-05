@@ -2,7 +2,7 @@ mysql:
   host: localhost
   user: root
   port: 3306
-  password: Dajidali888
+  password: Ironman@6@
   database: quant
   charset: utf8mb4
 sql:

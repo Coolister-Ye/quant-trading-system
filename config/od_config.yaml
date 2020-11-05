@@ -6,3 +6,7 @@ order:
     SS: 1
   allQuantityTitle: 全部
   actionText: 下单
+  orderInfo: $$$ {} ORDER $$$ ->  {}.{} -> Price = [{}]${}, Quantity = {} -> isAction = {}
+  confirmAction:
+    Ture: 确定
+    False: 取消
