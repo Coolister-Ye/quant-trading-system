@@ -1,6 +1,7 @@
 import os
 import yaml
 import pathlib
+import pandas as pd
 
 
 class FileUtils:
@@ -13,4 +14,10 @@ class FileUtils:
         print('+ Load Yaml: ' + fp.as_posix())
         print('+ Load Cont: ' + str(re))
         return re
+
+    @staticmethod
+    def save_pd_csv(fn, colNames, data):
+        data = pd.DataFrame(data, columns=colNames)
+        data.to_csv(fn, encoding="utf-8", index=False)
+        print('+ Save pd to csv: ' + fn)
 
