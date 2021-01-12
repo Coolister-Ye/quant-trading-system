@@ -1,16 +1,63 @@
 order:
-  appId: com.tdx.tdxiMac
-  defaultCheckBoxTitle: 刷新
-  marketCode:
-    SZ: 0
-    SS: 1
-  allQuantityTitle: 全部
-  actionText: 下单
-  orderInfo: $$$ {} ORDER $$$ ->  {}.{} -> Price = [{}]${}, Quantity = {} -> isAction = {}
-  confirmAction:
-    Ture: 确定
-    False: 取消
-  histK:
-    d: date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,pctChg,isST
-    5: date,time,code,open,high,low,close,volume,amount,adjustflag
-    60: date,time,code,open,high,low,close,volume,amount,adjustflag
+  pingAn:
+    appId: com.tdx.tdxiMac
+    defaultCheckBoxTitle: 刷新
+    marketCode:
+      SZ: 0
+      SS: 1
+    allQuantityTitle: 全部
+    actionText: 下单
+    orderInfo: $$$ {} ORDER $$$ ->  {}.{} -> Price = [{}]${}, Quantity = {} -> isAction = {}
+    confirmAction:
+      Ture: 确定
+      False: 取消
+  tongHuaShun:
+    appId: cn.com.10jqka.macstockPro
+    direction:
+      buy: 买入
+      sell: 卖出
+    confirm: 确定
+    cancel:
+      tab: 委托
+
+baoStock:
+    histK:
+      d: date,code,open,high,low,close,preclose,volume,amount,adjustflag,turn,tradestatus,pctChg,isST
+
+realTime:
+  sina:
+    RealTimeUrl: http://hq.sinajs.cn/list=
+    colName:
+      - stock_name
+      - today_open_price
+      - yesterday_close_price
+      - now_price
+      - today_highest_price
+      - today_lowest_price
+      - buy_1
+      - sell_1
+      - volume
+      - volume_price
+      - buy_1_volume
+      - buy_1_price
+      - buy_2_volume
+      - buy_2_price
+      - buy_3_volume
+      - buy_3_price
+      - buy_4_volume
+      - buy_4_price
+      - buy_5_volume
+      - buy_5_price
+      - sell_1_volume
+      - sell_1_price
+      - sell_2_volume
+      - sell_2_price
+      - sell_3_volume
+      - sell_3_price
+      - sell_4_volume
+      - sell_4_price
+      - sell_5_volume
+      - sell_5_price
+      - date
+      - timestamp
+    RealTimeKData: https://quotes.sina.cn/cn/api/jsonp_v2.php/data=/CN_MarketDataService.getKLineData?symbol={}&scale={}&ma={}&datalen={}

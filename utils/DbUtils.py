@@ -31,7 +31,7 @@ class DbUtils(FileUtils):
                     sql = self.db_config['sql']['insert_template'].format(tableName, colNamesSql, valuesSql)
                     cursor.execute(sql)
             self.db_conn.commit()
-        except Exception:
+        except:
             print("- Cannot load data to mysql: " + sql)
 
     def get(self, tableName, colNames="*", whereCondition="", limit=""):
@@ -45,7 +45,7 @@ class DbUtils(FileUtils):
             data = cursor.fetchall()
             print("+ Load data from mysql: " + sql)
             return list(data)
-        except Exception:
+        except:
             print("- Cannot get data from mysql: " + sql)
 
 

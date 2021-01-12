@@ -1,0 +1,1 @@
+0 20 * * * /anaconda3/bin/python3.6 /Users/jason/Desktop/Python_Script/quant-trading-system/utils/BsUtils.py >> /Users/jason/Desktop/Python_Script/quant-trading-system/logs.log 2>&1

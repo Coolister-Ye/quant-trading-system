@@ -34,4 +34,3 @@ class AutoRefresh(Thread):
 if __name__ == '__main__':
     ar = AutoRefresh()
     ar.run()
-

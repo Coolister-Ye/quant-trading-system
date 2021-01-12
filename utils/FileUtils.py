@@ -6,7 +6,7 @@ import pandas as pd
 
 class FileUtils:
     def __init__(self):
-        self.config_path = pathlib.Path(os.getcwd()).parent.joinpath('config')
+        self.config_path = pathlib.Path(__file__).parent.parent.joinpath('config')
 
     def load_yaml(self, fn):
         fp = self.config_path.joinpath(fn)
